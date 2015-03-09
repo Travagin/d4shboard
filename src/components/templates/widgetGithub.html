@@ -6,24 +6,28 @@
 					<input type='checkbox' ng-model="checked" name='close' value='valuable' id="close" />
 					<label for="close"><span class="glyphicon glyphicon-trash"></span></label>
 				</div>
+				<div class="col-xs-6 pull-right">
+					<form ng-submit="search(username)">
+						<div class="input-group">
+							<div class="input-group-addon">
+								<span class="glyphicon glyphicon-search"></span>
+							</div>
+							<input type="text" ng-model="username" class="form-control">
+						</div>
+					</form>
+				</div>
 
-				<form ng-submit="search(username)">
-					<div class="input-group col-xs-6 pull-right">
-						<div class="input-group-addon"><span class="glyphicon glyphicon-search"></div>
-						<input type="text" ng-model="username" class="form-control">
-					</div>
-				</form>
-				
-			</div>
-			<hr>
-			<div class="col-xs-12" ng-show="loaded">
-				<ul class="profile">
-					<li><img class="img-circle" ng-src={{user.avatar_url}}></li>
-					<li>{{user.name}} | {{user.email}}</li>
-					<li>Repos: {{user.public_repos}}</li>
-					<li>Following: {{user.following}}</li>
-					<li>Followers: {{user.followers}}</li>
-				</ul>
+				<div class="col-xs-12" ng-show="loaded">
+					<hr>
+					<ul class="profile">
+						<li><img class="img-circle" ng-src={{user.avatar_url}}></li>
+						<hr>
+						<li>{{user.name}} | {{user.email}}</li>
+						<li>Repos: {{user.public_repos}}</li>
+						<li>Following: {{user.following}}</li>
+						<li>Followers: {{user.followers}}</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -10,6 +10,9 @@ body{
 	-webkit-border-radius: 0px; 
 	border-radius: 0px; 
 }
+.break{
+	clear: both;
+}
 // Modal---------------------------------------------------------------------------------
 
 .modal-footer {
@@ -89,14 +92,33 @@ option {
 //Widget
 .widgetContent{
 	padding: 2%;
+	height: auto;
 }
 ul{
+	list-style:none;
+	color: $grey;
+	display: block;
 	
-	
+}
+ul li{
+	display: block;
+}
+ul li a{
+	float: left;
+	padding: 1%;
 }
 .img-circle{
 	max-width: 150px;
+	padding: 2%;
 }
+.img-circle.min{
+	max-width: 80px;
+	max-height: 80px;
+	padding: 2%;
+	display: block;
+	float: left;
+}
+
 // Close widget---------------------------------------------------------------------------------
 input[type=checkbox] {
 	display:none;

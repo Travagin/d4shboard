@@ -16,18 +16,18 @@ app.controller('MainCtrl',['$scope','$http',function ($scope,$http) {
 
 		$scope.widgetAdded = true;
 
-		console.log("Add Widget ok");
+		console.log('Add Widget ok');
 		console.log($scope.widgets);
 	};
 
 	$scope.search = function(username){
 
-		console.log("Searching for " + username);
+		console.log('Searching for ' + username);
 
 		$scope.userNotFound = false;
 		$scope.loaded = false;
 
-		$http.get("https://api.github.com/users/" + username)
+		$http.get('https://api.github.com/users/' + username)
 		.success(function (data) {
 
 			$scope.user = data;
@@ -36,10 +36,23 @@ app.controller('MainCtrl',['$scope','$http',function ($scope,$http) {
 		.error(function () {
 			$scope.userNotFound = true;
 		});
-	}
 
+		$http.get('https://api.github.com/users/' + username + '/repos')
+		.success(function (data) {
+
+			$scope.repos = data;
+			$scope.reposFound = data.length > 0;
+
+		});
+
+		$http.get('https://api.github.com/users/' + username + '/followers')
+		.success(function (data) {
+
+			$scope.followers = data;
+			$scope.followersFound = data.length > 0;
+
+		});
+
+	};
 }]);
-
-
-
 

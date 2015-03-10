@@ -10,6 +10,13 @@
         <div class="modal-body">
           <div class="col-xs-6">
             <form>
+              <h4>Type</h4>
+              <div class="SelectStyle">
+                <select name="color" ng-model="widget.type">
+                  <option value = "github">Github</option>
+                  <option value = "text">Text</option>
+                </select>  
+              </div>  
               <h4>Color</h4>
               <div class="SelectStyle">
                 <select name="color" ng-model="widget.color">
@@ -42,15 +49,23 @@
     </div>
   </div>
 
-  <div ng-include="'components/templates/widgetGithub.html'" ng-repeat="widget in widgets">
-    
-  </div>
-</div>
+<!--  <div ng-include="'components/templates/widgetGithub.html'" ng-repeat="widget in widgets">
 
-<!-- <ul ng-repeat="w in widgetConfiguration">
- <li>{{w.color}}</li>
- <li>{{w.size}}</li>
-</ul>  -->
+</div> -->
+
+<!-- <div ng-repeat="widget in widgets">
+  {{widget.type}}
+  {{widget.color}}
+  {{widget.size}}
+</div> -->
+
+<github-directive></github-directive>
+
+<text-directive></text-directive>
+
+</div> 
+
+
 
 
 

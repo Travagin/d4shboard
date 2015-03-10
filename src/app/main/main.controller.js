@@ -66,3 +66,5 @@ app.factory('Widgets', function () {
 
 	return self;
 });
+
+

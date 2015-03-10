@@ -2,22 +2,18 @@
 
 var app = angular.module('github');
 
-app.controller('MainCtrl',['$scope','$http',function ($scope,$http) {
+
+app.controller('MainCtrl',['$scope','$http', 'Widgets',function ($scope, $http, Widgets) {
 
 	$scope.widget = {};
-	$scope.widgets = [];
-	$scope.widgetConfiguration = [];
+	$scope.widgets = Widgets.all();
 
+	
 	$scope.addWidget = function(widget){
-
-
-		$scope.widgets = $scope.widgetConfiguration.push(angular.copy(widget));
-		// $scope.widget = {};
+		Widgets.add(widget);
 
 		$scope.widgetAdded = true;
-
-		console.log('Add Widget ok');
-		console.log($scope.widgets);
+		
 	};
 
 	$scope.search = function(username){
@@ -56,3 +52,17 @@ app.controller('MainCtrl',['$scope','$http',function ($scope,$http) {
 	};
 }]);
 
+app.factory('Widgets', function () {
+	var self = {},
+	widgets = [];
+
+	self.all = function () {
+		return widgets;
+	}
+
+	self.add = function (widget) {
+		widgets.push(angular.copy(widget));
+	};
+
+	return self;
+});

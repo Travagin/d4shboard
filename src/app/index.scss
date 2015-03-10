@@ -2,9 +2,11 @@ $red : #e74c3c;
 $grey : #34495e;
 $green : #1abc9c;
 
+
 // General---------------------------------------------------------------------------------
-body{
-	padding: 2%; 
+
+header{
+	background-color:lighten($grey,2%);
 }
 .btn{
 	-webkit-border-radius: 0px; 
@@ -87,10 +89,14 @@ option {
 // Dashboard---------------------------------------------------------------------------------
 .widget{
 	margin: 2% 0 0 0; 
-
 	color: #FFF;
 }
 //Widget
+.modal-header{
+	background-color:lighten($grey,2%);
+	color:#FFF;
+}
+
 .widgetContent{
 	padding: 2%;
 	height: auto;
@@ -125,7 +131,7 @@ input[type=checkbox] {
 	display:none;
 }
 input[type=checkbox] + label:hover{
-	color: $red;
+	color: darken($red,20%);
 }
 input[type=checkbox] + label
 {
@@ -135,18 +141,20 @@ input[type=checkbox] + label
 	display:inline-block;
 	padding: 0 0 0 0px;
 }
-.btn .btn-flat{
-	padding: 20px 40px;
-	margin: 20px;
-	background: #39b54a;
-	box-shadow: 0px 4px 0px 0px #21672a;
+.btn-flat{
+	padding: 1% 2%;
+	margin: 1%;
+	background: $green;
+	box-shadow: 0px 4px 0px 0px darken($green, 20%);
 	color: #FFF;
 	font-size: 1.3em;
 	border:0px;
-	-webkit-appearance: button;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
 	cursor: pointer;
 	outline: 0;
 }	
+.addButton{
+	margin-top: 15%;
+}
 

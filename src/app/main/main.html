@@ -1,5 +1,7 @@
+<header>
+  <a class="btn btn-flat btn-lg" data-toggle="modal" href='#modal-id'>New Widget</a>
+</header>
 <div class="container">
-  <a class="btn btn-default btn-lg" data-toggle="modal" href='#modal-id'>New Widget</a>
   <div class="modal fade" id="modal-id">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -41,9 +43,9 @@
             <div class="{{widget.color}} col-xs-{{widget.size}}"></div>
           </div>
         </div>
-        <br>
+
         <div class="modal-footer">
-          <button type="button"  class="btn btn-default" ng-click="addWidget(widget)" data-dismiss="modal" ng-disabled="widgetForm.type.$error.required || widgetForm.color.$error.required || widgetForm.size.$error.required">Add Widget</button>
+          <button type="button" class="btn btn-flat addButton" ng-click="addWidget(widget)" data-dismiss="modal" ng-disabled="widgetForm.type.$error.required || widgetForm.color.$error.required || widgetForm.size.$error.required">Add Widget</button>
 
         </div>
       </div>

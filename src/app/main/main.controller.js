@@ -16,6 +16,13 @@ app.controller('MainCtrl',['$scope','$http', 'Widgets',function ($scope, $http, 
 		
 	};
 
+	$scope.removeWidget = function(widget){
+		console.log('Remove pressed');
+		Widgets.remove(widget);
+
+	};
+
+
 	$scope.search = function(username){
 
 		console.log('Searching for ' + username);
@@ -58,10 +65,14 @@ app.factory('Widgets', function () {
 
 	self.all = function () {
 		return widgets;
-	}
+	};
 
 	self.add = function (widget) {
 		widgets.push(angular.copy(widget));
+	};
+
+	self.remove = function(index){
+		widgets.splice(index,1);
 	};
 
 	return self;

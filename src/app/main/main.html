@@ -9,17 +9,17 @@
         </div>
         <div class="modal-body">
           <div class="col-xs-6">
-            <form>
+            <form name="widgetForm" >
               <h4>Type</h4>
               <div class="SelectStyle">
-                <select name="color" ng-model="widget.type">
+                <select name="type" ng-model="widget.type" required>
                   <option value = "github">Github</option>
                   <option value = "text">Text</option>
                 </select>  
               </div>  
               <h4>Color</h4>
               <div class="SelectStyle">
-                <select name="color" ng-model="widget.color">
+                <select name="color" ng-model="widget.color" required>
                   <option value = "red">Red</option>
                   <option value = "grey">Grey</option>
                   <option value = "green">Green</option>
@@ -27,7 +27,7 @@
               </div>  
               <h4>Size</h4>
               <div class="SelectStyle">
-                <select name="size" ng-model="widget.size">
+                <select name="size" ng-model="widget.size" required>
                   <option value = "3">Small</option>
                   <option value = "6">Medium</option>
                   <option value = "12">Large</option>
@@ -43,7 +43,8 @@
         </div>
         <br>
         <div class="modal-footer">
-          <button type="button"  class="btn btn-default" ng-click="addWidget(widget)" data-dismiss="modal">Add Widget</button>
+          <button type="button"  class="btn btn-default" ng-click="addWidget(widget)" data-dismiss="modal" ng-disabled="widgetForm.type.$error.required || widgetForm.color.$error.required || widgetForm.size.$error.required">Add Widget</button>
+
         </div>
       </div>
     </div>

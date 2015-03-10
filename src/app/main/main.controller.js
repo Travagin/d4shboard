@@ -22,7 +22,6 @@ app.controller('MainCtrl',['$scope','$http', 'Widgets',function ($scope, $http, 
 
 	};
 
-
 	$scope.search = function(username){
 
 		console.log('Searching for ' + username);

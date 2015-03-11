@@ -2,7 +2,7 @@
 
 var app = angular.module('github');
 
-
+// Main Controller
 app.controller('MainCtrl',['$scope','Widgets',function ($scope, Widgets) {
 
 	$scope.widget = {};
@@ -42,9 +42,10 @@ app.factory('Widgets', function () {
 
 	return self;
 });
+// ---------------------------------------------------------------------------------------
 
+//GitHub Controller
 app.controller('githubCtrl',['$scope','$http',function ($scope, $http) {
-
 
 	$scope.search = function(username){
 

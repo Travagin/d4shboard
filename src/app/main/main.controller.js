@@ -3,17 +3,17 @@
 var app = angular.module('github');
 
 
-app.controller('MainCtrl',['$scope','$http', 'Widgets',function ($scope, $http, Widgets) {
+app.controller('MainCtrl',['$scope','Widgets',function ($scope, Widgets) {
 
 	$scope.widget = {};
 	$scope.widgets = Widgets.all();
 
-	
+
 	$scope.addWidget = function(widget){
 		Widgets.add(widget);
 
 		$scope.widgetAdded = true;
-		
+
 	};
 
 	$scope.removeWidget = function(widget){
@@ -21,6 +21,30 @@ app.controller('MainCtrl',['$scope','$http', 'Widgets',function ($scope, $http, 
 		Widgets.remove(widget);
 
 	};
+
+}]);
+
+app.factory('Widgets', function () {
+	var self = {},
+	widgets = [];
+
+	self.all = function () {
+		return widgets;
+	};
+
+	self.add = function (widget) {
+		widgets.push(angular.copy(widget));
+	};
+
+	self.remove = function(index){
+		widgets.splice(index,1);
+	};
+
+	return self;
+});
+
+app.controller('githubCtrl',['$scope','$http',function ($scope, $http) {
+
 
 	$scope.search = function(username){
 
@@ -56,25 +80,5 @@ app.controller('MainCtrl',['$scope','$http', 'Widgets',function ($scope, $http, 
 		});
 
 	};
-}]);
-
-app.factory('Widgets', function () {
-	var self = {},
-	widgets = [];
-
-	self.all = function () {
-		return widgets;
-	};
-
-	self.add = function (widget) {
-		widgets.push(angular.copy(widget));
-	};
-
-	self.remove = function(index){
-		widgets.splice(index,1);
-	};
-
-	return self;
-});
-
+}])
 

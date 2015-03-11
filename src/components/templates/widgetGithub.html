@@ -1,48 +1,50 @@
-<div  ng-hide="checked">
-	<div class="widget" ng-show="widgetAdded">
-		<div class="text-center col-xs-{{widget.size}} {{widget.color}} widgetContent">
-			<div class="col-xs-12">   
-				<div class="pull-left">
-					<input type='checkbox' ng-click="removeWidget($index)" name='close' value='valuable' id="close" />
-					<label for="close"><span class="glyphicon glyphicon-trash"></span></label>
-				</div>
-				<div class="col-xs-9 pull-right">
-					<form ng-submit="search(username)">
-						<div class="input-group">
-							<div class="input-group-addon">
-								<span class="glyphicon glyphicon-search"></span>
-							</div>
-							<input type="text" ng-model="username" class="form-control">
-						</div>
-					</form>
-				</div>
-				<div ng-show="userNotFound"><p>User not found</p></div>
-				<div class="col-xs-12" ng-show="loaded">
-					<hr>
-					<ul class="profile">
-						<li><img class="img-circle" ng-src={{user.avatar_url}}></li>
-
-						<div class="panel panel-info">
-							<div class="panel-heading">
-								<li>{{user.name}} | {{user.email}}</li>
-							</div>
-							<div class="panel-body">
-								<li>Repos: {{user.public_repos}} | Following: {{user.following}} | Followers: {{user.followers}}</li>
-							</div>
-						</div>
-					</ul>
-					<div ng-show="reposFound">
-						<ul ng-repeat="repo in repos">
-							<li><a href="{{repo.html_url}}" target="_blank" class="btn btn-success"> {{repo.name}} </a></li>
-						</ul>
+<div ng-controller="githubCtrl">
+	<div  ng-hide="checked">
+		<div class="widget" ng-show="widgetAdded">
+			<div class="text-center col-xs-{{widget.size}} {{widget.color}} widgetContent">
+				<div class="col-xs-12">
+					<div class="pull-left">
+						<input type='checkbox' ng-click="removeWidget($index)" name='close' value='valuable' id="close" />
+						<label for="close"><span class="glyphicon glyphicon-trash"></span></label>
 					</div>
-					<div class="break"></div>
-					<div ng-show="followersFound">
-						<ul>
-							<li ng-repeat="follower in followers">
-								<img ng-src={{follower.avatar_url}} class="img-circle min">
-							</li>
+					<div class="col-xs-9 pull-right">
+						<form ng-submit="search(username)">
+							<div class="input-group">
+								<div class="input-group-addon">
+									<span class="glyphicon glyphicon-search"></span>
+								</div>
+								<input type="text" ng-model="username" class="form-control">
+							</div>
+						</form>
+					</div>
+					<div ng-show="userNotFound"><p>User not found</p></div>
+					<div class="col-xs-12" ng-show="loaded">
+						<hr>
+						<ul class="profile">
+							<li><img class="img-circle" ng-src={{user.avatar_url}}></li>
+
+							<div class="panel panel-info">
+								<div class="panel-heading">
+									<li>{{user.name}} | {{user.email}}</li>
+								</div>
+								<div class="panel-body">
+									<li>Repos: {{user.public_repos}} | Following: {{user.following}} | Followers: {{user.followers}}</li>
+								</div>
+							</div>
 						</ul>
+						<div ng-show="reposFound">
+							<ul ng-repeat="repo in repos">
+								<li><a href="{{repo.html_url}}" target="_blank" class="btn btn-success"> {{repo.name}} </a></li>
+							</ul>
+						</div>
+						<div class="break"></div>
+						<div ng-show="followersFound">
+							<ul>
+								<li ng-repeat="follower in followers">
+									<img ng-src={{follower.avatar_url}} class="img-circle min">
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -1,0 +1,66 @@
+<!-- 
+<div  ng-hide="checked">
+ <div class="widget" ng-show="widgetAdded">
+   <div class="text-center col-xs-{{widget.size}} {{widget.color}} widgetContent">
+     <div class="col-xs-12">
+       <div class="pull-left">
+         <input type='checkbox' ng-click="removeWidget($index)" name='close' value='valuable' id="close" />
+         <label for="close"><span class="glyphicon glyphicon-trash"></span></label>
+       </div>
+       <div class="col-xs-12">
+         <p>Content weather widget</p>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+
+<div class="row">
+ <div class="weather-widget col-sm-6" ng-controller="CityController as CityCtrl">
+   <div class="weather-outer" ng-repeat="city in cities track by $index" ng-controller="WeatherController" ng-init="init(cities[$index])" ng-show="weatherReady">
+     <div class="city-weather weather-{{weather.query.results.channel.item.condition.code | weatherType}}">
+       <div class="current" class="row" ng-click="showForecast = !showForecast">
+         <div class="current-left">
+           <div class="weather-title">
+             {{weather.query.results.channel.location.city}}
+           </div>
+           <div class="weather-subtitle">
+             {{weather.query.results.channel.location.country}}
+           </div>
+         </div>
+         <div class="current-right">
+           <div class="weather-temp">
+             {{weather.query.results.channel.item.condition.temp | celsius}}
+           </div>
+           <div class="weather-icon">
+             <img ng-src="img/{{weather.query.results.channel.item.condition.code | weatherType}}.svg"></img>
+           </div>
+         </div>
+       </div>
+       <div class="forecast" ng-show="showForecast">
+         <div class="weather-forecast" ng-repeat="forecast in weather.query.results.channel.item.forecast | limitTo: 4">
+           <div class="forecast-date">
+             {{forecast.date | shortDate}}
+           </div>
+           <div class="forecast-icon">
+             <img ng-src="img/{{forecast.code | weatherType}}.svg"></img>
+           </div>
+           <div class="forecast-temp-range">
+             {{forecast.low | celsius}} | {{forecast.high | celsius}}
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <div class="new-city">
+     <form ng-submit="addCity()" class="input-group">
+       <input type="text" ng-model="newCity" class="form-control" placeholder="Add new city...">
+       <span class="input-group-btn">
+         <input class="btn btn-default" type="submit" value="Add">
+       </span>
+     </form>
+   </div>
+ </div>
+</div>
+ -->

@@ -1,4 +1,4 @@
-<!-- 
+<!-- <!-- 
 <div  ng-hide="checked">
  <div class="widget" ng-show="widgetAdded">
    <div class="text-center col-xs-{{widget.size}} {{widget.color}} widgetContent">
@@ -13,9 +13,10 @@
      </div>
    </div>
  </div>
-</div>
+</div> -->
 
-<div class="row">
+<!-- 
+<div class="row" ng-app="app">
  <div class="weather-widget col-sm-6" ng-controller="CityController as CityCtrl">
    <div class="weather-outer" ng-repeat="city in cities track by $index" ng-controller="WeatherController" ng-init="init(cities[$index])" ng-show="weatherReady">
      <div class="city-weather weather-{{weather.query.results.channel.item.condition.code | weatherType}}">
@@ -63,4 +64,4 @@
    </div>
  </div>
 </div>
- -->
+--> 

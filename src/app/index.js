@@ -1,14 +1,14 @@
 'use strict';
 
-angular.module('github', ['ui.router'])
-  .config(function ($stateProvider, $urlRouterProvider) {
-    $stateProvider
-      .state('home', {
-        url: '/',
-        templateUrl: 'app/main/main.html',
-        controller: 'MainCtrl'
-      });
+angular.module('dashboard', ['ui.router','github'])
+.config(function ($stateProvider, $urlRouterProvider) {
+	$stateProvider
+	.state('home', {
+		url: '/',
+		templateUrl: 'app/main/main.html',
+		controller: 'MainCtrl'
+	});
 
-    $urlRouterProvider.otherwise('/');
-  })
+	$urlRouterProvider.otherwise('/');
+})
 ;

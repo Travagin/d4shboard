@@ -112,11 +112,11 @@ weather.filter('celsius', function() {
   };
 });
 
-// TEST.shortDate = function() {
-//  return function(input){
-//    input = input || '';
-//    var out = '';
-//    out = moment(input, "DD MMM YYYY").format("ddd DD");
-//    return out;
-//  };
-// };
+weather.filter('shortDate', function(){
+  return function(input){
+    input = input || '';
+    var out = '';
+    out = moment(input, "DD MMM YYYY").format("ddd DD");
+    return out;
+  };
+});

@@ -32,7 +32,7 @@
                   <div class="forecast" ng-show="showForecast">
                     <div class="weather-forecast" ng-repeat="forecast in weather.query.results.channel.item.forecast | limitTo: 4">
                       <div class="forecast-date">
-                        {{forecast.date}}
+                        {{forecast.date | shortDate}}
                       </div>
                       <div class="forecast-icon">
                         <img ng-src="../../assets/images/{{forecast.code | weatherType}}.svg"></img>

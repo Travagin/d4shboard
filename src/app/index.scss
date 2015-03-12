@@ -9,11 +9,12 @@ header{
 	background-color:lighten($grey,2%);
 }
 .btn{
-	-webkit-border-radius: 0px; 
-	border-radius: 0px; 
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
 }
 .break{
 	clear: both;
+
 }
 // Modal---------------------------------------------------------------------------------
 
@@ -21,21 +22,21 @@ header{
 	padding: 15px;
 	text-align: right;
 	border: none;
-	margin-top: 55px;  
+	margin-top: 55px;
 }
 .red{
-	background-color: $red; 
-	min-height:5rem; 
+	background-color: $red;
+	min-height:5rem;
 	height:auto;
 }
 .green{
 	background-color: $green;
-	min-height:5rem; 
+	min-height:5rem;
 	height:auto;
 }
 .grey{
-	background-color: $grey; 
-	min-height:5rem; 
+	background-color: $grey;
+	min-height:5rem;
 	height:auto;
 }
 
@@ -88,7 +89,7 @@ option {
 
 // Dashboard---------------------------------------------------------------------------------
 .widget{
-	margin: 2% 0 0 0; 
+	margin: 2% 0 0 0;
 	color: #FFF;
 }
 //Widget
@@ -105,7 +106,7 @@ ul{
 	list-style:none;
 	color: $grey;
 	display: block;
-	
+
 }
 ul li{
 	display: block;
@@ -153,7 +154,7 @@ input[type=checkbox] + label
 	border-radius: 3px;
 	cursor: pointer;
 	outline: 0;
-}	
+}
 .addButton{
 	margin-top: 15%;
 }

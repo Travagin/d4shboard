@@ -43,45 +43,7 @@ app.factory('Widgets', function () {
 	return self;
 });
 // ---------------------------------------------------------------------------------------
-var github = angular.module('github',[]);
-//GitHub Controller
-github.controller('githubCtrl',['$scope','$http',function ($scope, $http) {
 
-	$scope.search = function(username){
-
-		console.log('Searching for ' + username);
-
-		$scope.userNotFound = false;
-		$scope.loaded = false;
-
-		$http.get('https://api.github.com/users/' + username)
-		.success(function (data) {
-
-			$scope.user = data;
-			$scope.loaded = true;
-		})
-		.error(function () {
-			$scope.userNotFound = true;
-		});
-
-		$http.get('https://api.github.com/users/' + username + '/repos')
-		.success(function (data) {
-
-			$scope.repos = data;
-			$scope.reposFound = data.length > 0;
-
-		});
-
-		$http.get('https://api.github.com/users/' + username + '/followers')
-		.success(function (data) {
-
-			$scope.followers = data;
-			$scope.followersFound = data.length > 0;
-
-		});
-
-	};
-}]);
 
 //Weather Controller
 
@@ -206,7 +168,7 @@ github.controller('githubCtrl',['$scope','$http',function ($scope, $http) {
 // 	};
 // };
 
-// angular.module('github', ['ngAnimate'])
+// angular.module('weather', ['ngAnimate'])
 // .filter("weatherType", TEST.weatherType)
 // .filter("celsius", TEST.celsius)
 // .filter("shortDate", TEST.shortDate)

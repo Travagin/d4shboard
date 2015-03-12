@@ -4,6 +4,7 @@ describe('controllers', function(){
   var scope;
 
   beforeEach(module('github'));
+  beforeEach(module('weather'));
 
   beforeEach(inject(function($rootScope) {
     scope = $rootScope.$new();

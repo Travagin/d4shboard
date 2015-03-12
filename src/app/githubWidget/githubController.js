@@ -1,6 +1,8 @@
-var github = angular.module('github',[]);
+'use strict';
+
+angular.module('github',[])
 //GitHub Controller
-github.controller('githubCtrl',['$scope','$http',function ($scope, $http) {
+.controller('githubCtrl',['$scope','$http',function ($scope, $http) {
 
 	$scope.search = function(username){
 

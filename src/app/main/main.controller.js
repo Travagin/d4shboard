@@ -1,9 +1,9 @@
 'use strict';
 
-var app = angular.module('dashboard');
+angular.module('dashboard')
 
 // Main Controller
-app.controller('MainCtrl',['$scope','Widgets',function ($scope, Widgets) {
+.controller('MainCtrl',['$scope','Widgets',function ($scope, Widgets) {
 
 	$scope.widget = {};
 	$scope.widgets = Widgets.all();
@@ -22,9 +22,9 @@ app.controller('MainCtrl',['$scope','Widgets',function ($scope, Widgets) {
 
 	};
 
-}]);
+}])
 
-app.factory('Widgets', function () {
+.factory('Widgets', function () {
 	var self = {},
 	widgets = [];
 

@@ -1,3 +1,4 @@
+
 <header>
   <a class="btn btn-flat btn-lg" data-toggle="modal" href='#modal-id'>New Widget</a>
 </header>
@@ -16,7 +17,6 @@
               <div class="SelectStyle">
                 <select name="type" ng-model="widget.type" required>
                   <option value = "github">Github</option>
-                  <option value = "text">Text</option>
                   <option value = "weather">Weather</option>
                 </select>
               </div>
@@ -53,19 +53,15 @@
     </div>
   </div>
 
-
-  <div ng-repeat="widget in widgets">
-
-    <github-directive ng-show="widget.type == 'github'" ></github-directive>
-
-    <text-directive ng-show="widget.type == 'text'"></text-directive>
-
-    <weather-directive ng-show="widget.type == 'weather'"></weather-directive>
-
+  <div class="packery-container" >
+    <div ng-repeat="widget in widgets" class="item w{{widget.size}}" packery-dir>
+      <github-directive ng-show="widget.type == 'github'" ></github-directive>
+      <text-directive ng-show="widget.type == 'text'"></text-directive>
+      <weather-directive ng-show="widget.type == 'weather'"></weather-directive>
+    </div>
   </div>
 
 </div>
-
 
 
 

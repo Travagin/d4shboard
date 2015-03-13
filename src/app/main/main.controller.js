@@ -11,7 +11,6 @@ angular.module('dashboard')
 
 	$scope.addWidget = function(widget){
 		Widgets.add(widget);
-
 		$scope.widgetAdded = true;
 
 	};
@@ -19,7 +18,6 @@ angular.module('dashboard')
 	$scope.removeWidget = function(widget){
 		console.log('Remove pressed');
 		Widgets.remove(widget);
-
 	};
 
 }])

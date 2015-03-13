@@ -159,3 +159,16 @@ input[type=checkbox] + label
 	margin-top: 15%;
 }
 
+.item{
+	&.w3{
+		width:25%;
+	}
+	&.w6{
+		width:50%;
+	}
+	&.w12{
+		width:100%;
+	}
+}
+
+

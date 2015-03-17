@@ -89,7 +89,7 @@ option {
 
 // Dashboard---------------------------------------------------------------------------------
 .widget{
-	margin: 2% 0 0 0;
+	margin: 0;
 	color: #FFF;
 }
 //Widget
@@ -99,9 +99,14 @@ option {
 }
 
 .widgetContent{
-	padding: 2%;
+	padding: 5px;
 	height: auto;
 }
+
+.widgetInner{
+	padding: 10px 15px;
+}
+
 ul{
 	list-style:none;
 	color: $grey;

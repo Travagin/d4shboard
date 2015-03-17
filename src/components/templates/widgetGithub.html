@@ -1,8 +1,8 @@
 <div ng-controller="githubCtrl">
 	<div  ng-hide="checked">
 		<div class="widget" ng-show="widgetAdded">
-			<div class="text-center col-xs-12 {{widget.color}} widgetContent">
-				<div class="col-xs-12">
+			<div class="text-center col-xs-12 widgetContent">
+				<div class="col-xs-12 widgetInner {{widget.color}}">
 					<div class="pull-left">
 						<input type='checkbox' ng-click="removeWidget($index)" name='close' value='valuable' id="close" />
 						<label for="close"><span class="glyphicon glyphicon-trash"></span></label>

@@ -1,0 +1,39 @@
+<div ng-controller="twitterCtrl">
+	<div  ng-hide="checked">
+		<div class="widget" ng-show="widgetAdded">
+			<div class="text-center col-xs-12 widgetContent">
+				<div class="col-xs-12 widgetInner {{widget.color}}">
+					<div class="pull-left">
+						<input type='checkbox' ng-click="removeWidget($index)" name='close' value='valuable' id="close" />
+						<label for="close"><span class="glyphicon glyphicon-trash"></span></label>
+					</div>
+					
+					
+					
+					<div class="col-xs-12">
+            <form ng-submit="search()" class="widget-search-form">
+						  <span class="glyphicon glyphicon-search"></span>
+              <input type="text" ng-model="query" placeholder="Hashtag..." class="widget-search">
+            </form>
+          </div>
+          <div class="col-xs-12">            
+            <hr>
+            <ul class="list-group" ng-hide="loading">
+                <li class="list-group-item">
+                  Cargando...
+                </li>
+            </ul>
+            <ul class="list-group" ng-show="loading">
+                <li ng-repeat="tweet in tweets" class="list-group-item">
+                  <span>{{tweet.user.screen_name}}</span> | {{tweet.text}}
+                </li>
+            </ul>
+          </div>
+					
+					
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

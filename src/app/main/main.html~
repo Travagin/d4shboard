@@ -18,7 +18,6 @@
                 <select name="type" ng-model="widget.type" required>
                   <option value = "github">Github</option>
                   <option value = "weather">Weather</option>
-                  <option value = "twitter">Twitter</option>
                 </select>
               </div>
               <h4>Color</h4>
@@ -61,7 +60,6 @@
       <github-directive ng-show="widget.type == 'github'" ></github-directive>
       <text-directive ng-show="widget.type == 'text'"></text-directive>
       <weather-directive ng-show="widget.type == 'weather'"></weather-directive>
-      <twitter-directive ng-show="widget.type == 'twitter'"></twitter-directive>
     </div>
   </div>
 

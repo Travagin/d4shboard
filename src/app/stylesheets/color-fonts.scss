@@ -1,0 +1,25 @@
+$bgRed : #e74c3c;
+$bgGray : #34495e;
+$bgGreen : #1abc9c;
+$bgBlue : #3498db;
+$bgYellow : #f39c12;
+
+@font-face {
+  font-family: 'Gotham';
+  font-weight: 300;
+  src: url('../../assets/fonts/Gotham-Light.woff');
+}
+
+@font-face {
+  font-family: 'Gotham';
+  font-weight: 400;
+  src: url('../../assets/fonts/Gotham-Book.woff');
+}
+
+@font-face {
+  font-family: 'Gotham';
+  font-weight: 500;
+  src: url('../../assets/fonts/Gotham-Medium.woff');
+}
+
+$gotham : 'Gotham', 'Helvetica', sans-serif;

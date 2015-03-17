@@ -1,12 +1,16 @@
-$red : #e74c3c;
-$grey : #34495e;
-$green : #1abc9c;
-
+@import 'color-fonts';
 
 // General---------------------------------------------------------------------------------
 
+body{
+	background-image: url("../assets/images/bg-pattern.png");
+	background-repeat: repeat;
+	font-family: $gotham;
+	font-weight: 300;
+}
+
 header{
-	background-color:lighten($grey,2%);
+	background-color:lighten($bgGray,2%);
 }
 .btn{
 	-webkit-border-radius: 0px;
@@ -14,8 +18,12 @@ header{
 }
 .break{
 	clear: both;
-
 }
+
+#main-container{
+	padding-top: 2em;
+}
+
 // Modal---------------------------------------------------------------------------------
 
 .modal-footer {
@@ -24,20 +32,35 @@ header{
 	border: none;
 	margin-top: 55px;
 }
+
+.widget-bg-general{
+	min-height:5rem;
+	height:auto;
+}
+
 .red{
-	background-color: $red;
-	min-height:5rem;
-	height:auto;
+	@extend .widget-bg-general;
+	background-color: $bgRed;
 }
+
+.blue{
+	@extend .widget-bg-general;
+	background-color: $bgBlue;
+}
+
+.yellow{
+	@extend .widget-bg-general;
+	background-color: $bgYellow;
+}
+
 .green{
-	background-color: $green;
-	min-height:5rem;
-	height:auto;
+	@extend .widget-bg-general;
+	background-color: $bgGreen;
 }
+
 .grey{
-	background-color: $grey;
-	min-height:5rem;
-	height:auto;
+	@extend .widget-bg-general;
+	background-color: $bgGray;
 }
 
 // Select Style
@@ -94,7 +117,7 @@ option {
 }
 //Widget
 .modal-header{
-	background-color:lighten($grey,2%);
+	background-color:lighten($bgGray,2%);
 	color:#FFF;
 }
 
@@ -109,7 +132,7 @@ option {
 
 ul{
 	list-style:none;
-	color: $grey;
+	color: $bgGray;
 	display: block;
 
 }
@@ -137,7 +160,7 @@ input[type=checkbox] {
 	display:none;
 }
 input[type=checkbox] + label:hover{
-	color: darken($red,20%);
+	color: darken($bgRed,20%);
 }
 input[type=checkbox] + label
 {
@@ -150,8 +173,8 @@ input[type=checkbox] + label
 .btn-flat{
 	padding: 1% 2%;
 	margin: 1%;
-	background: $green;
-	box-shadow: 0px 4px 0px 0px darken($green, 20%);
+	background: $bgGreen;
+	box-shadow: 0px 4px 0px 0px darken($bgGreen, 20%);
 	color: #FFF;
 	font-size: 1.3em;
 	border:0px;

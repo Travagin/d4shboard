@@ -115,6 +115,51 @@ option {
 	margin: 0;
 	color: #FFF;
 }
+
+.widget-search-form{
+	line-height: 2em;
+}
+
+.widget-search{
+	border: none;
+	border-bottom: 1px solid #FFFFFF;
+	color: #FFFFFF;
+	background: none;
+	&::-webkit-input-placeholder { /* WebKit browsers */
+	  color:    #FFF;
+	}
+	&::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	  color:    #FFF;
+	  opacity:  1;
+	}
+	&::-ms-input-placeholder { /* Internet Explorer 10+ */
+	  color:    #FFF;
+	}
+	&:focus{
+		outline-width: 0;
+	}
+}
+
+
+
+
+// input[placeholder] {
+// 	color: white !important;
+// }
+
+// input::-webkit-input-placeholder {
+// 	@extend .input-placeholder;
+// }
+// input::-moz-placeholder {
+// 	@extend .input-placeholder;
+// }
+// input:-moz-placeholder {	
+// 	@extend .input-placeholder;
+// }
+// input:-ms-input-placeholder { 
+// 	@extend .input-placeholder;
+// }
+
 //Widget
 .modal-header{
 	background-color:lighten($bgGray,2%);

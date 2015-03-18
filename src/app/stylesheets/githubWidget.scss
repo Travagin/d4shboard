@@ -3,6 +3,7 @@
 .img-circle{
 	max-width: 150px;
 	border:3px solid #FFF;
+	margin-top: 1.2rem;
 }
 .img-circle.min{
 	max-width: 80px;
@@ -21,7 +22,12 @@
 	background-color: transparentize($bgGray, 0.3);
 	padding:1.2rem;
 	color:#FFF;
+	max-width: 90%;
 	
+}
+.show-button{
+	border: none;
+	background: none;
 }
 .following{
 	border-top: 4px solid #42B7F4;
@@ -32,3 +38,5 @@
 .repos{
 	border-top: 4px solid #f39c12;
 }
+
+

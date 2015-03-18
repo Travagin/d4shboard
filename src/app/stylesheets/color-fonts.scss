@@ -5,21 +5,51 @@ $bgBlue : #3498db;
 $bgYellow : #f39c12;
 
 @font-face {
-  font-family: 'Gotham';
-  font-weight: 300;
-  src: url('../../assets/fonts/Gotham-Light.woff');
+	font-family: 'Gotham';
+	font-weight: 300;
+	src: url('../../assets/fonts/Gotham-Light.woff');
 }
 
 @font-face {
-  font-family: 'Gotham';
-  font-weight: 400;
-  src: url('../../assets/fonts/Gotham-Book.woff');
+	font-family: 'Gotham';
+	font-weight: 400;
+	src: url('../../assets/fonts/Gotham-Book.woff');
 }
 
 @font-face {
-  font-family: 'Gotham';
-  font-weight: 500;
-  src: url('../../assets/fonts/Gotham-Medium.woff');
+	font-family: 'Gotham';
+	font-weight: 500;
+	src: url('../../assets/fonts/Gotham-Medium.woff');
 }
 
 $gotham : 'Gotham', 'Helvetica', sans-serif;
+
+.widget-bg-general{
+	min-height:5rem;
+	height:auto;
+}
+
+.red{
+	@extend .widget-bg-general;
+	background-color: $bgRed;
+}
+
+.blue{
+	@extend .widget-bg-general;
+	background-color: $bgBlue;
+}
+
+.yellow{
+	@extend .widget-bg-general;
+	background-color: $bgYellow;
+}
+
+.green{
+	@extend .widget-bg-general;
+	background-color: $bgGreen;
+}
+
+.grey{
+	@extend .widget-bg-general;
+	background-color: $bgGray;
+}

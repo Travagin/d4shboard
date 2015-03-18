@@ -1,4 +1,5 @@
 @import 'color-fonts';
+@import 'githubWidget';
 
 // General---------------------------------------------------------------------------------
 
@@ -33,35 +34,7 @@ header{
 	margin-top: 55px;
 }
 
-.widget-bg-general{
-	min-height:5rem;
-	height:auto;
-}
 
-.red{
-	@extend .widget-bg-general;
-	background-color: $bgRed;
-}
-
-.blue{
-	@extend .widget-bg-general;
-	background-color: $bgBlue;
-}
-
-.yellow{
-	@extend .widget-bg-general;
-	background-color: $bgYellow;
-}
-
-.green{
-	@extend .widget-bg-general;
-	background-color: $bgGreen;
-}
-
-.grey{
-	@extend .widget-bg-general;
-	background-color: $bgGray;
-}
 
 // Select Style
 .SelectStyle {
@@ -122,18 +95,19 @@ option {
 
 .widget-search{
 	border: none;
+	max-width:auto;
 	border-bottom: 1px solid #FFFFFF;
 	color: #FFFFFF;
 	background: none;
 	&::-webkit-input-placeholder { /* WebKit browsers */
-	  color:    #FFF;
+		color:    #FFF;
 	}
 	&::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-	  color:    #FFF;
-	  opacity:  1;
+		color:    #FFF;
+		opacity:  1;
 	}
 	&::-ms-input-placeholder { /* Internet Explorer 10+ */
-	  color:    #FFF;
+		color:    #FFF;
 	}
 	&:focus{
 		outline-width: 0;
@@ -143,22 +117,22 @@ option {
 
 
 
-// input[placeholder] {
-// 	color: white !important;
-// }
+input[placeholder] {
+	color: white !important;
+}
 
-// input::-webkit-input-placeholder {
-// 	@extend .input-placeholder;
-// }
-// input::-moz-placeholder {
-// 	@extend .input-placeholder;
-// }
-// input:-moz-placeholder {	
-// 	@extend .input-placeholder;
-// }
-// input:-ms-input-placeholder { 
-// 	@extend .input-placeholder;
-// }
+input::-webkit-input-placeholder {
+	@extend .input-placeholder;
+}
+input::-moz-placeholder {
+	@extend .input-placeholder;
+}
+input:-moz-placeholder {	
+	@extend .input-placeholder;
+}
+input:-ms-input-placeholder { 
+	@extend .input-placeholder;
+}
 
 //Widget
 .modal-header{
@@ -188,17 +162,7 @@ ul li a{
 	float: left;
 	padding: 1%;
 }
-.img-circle{
-	max-width: 150px;
-	padding: 2%;
-}
-.img-circle.min{
-	max-width: 80px;
-	max-height: 80px;
-	padding: 2%;
-	display: block;
-	float: left;
-}
+
 
 // Close widget---------------------------------------------------------------------------------
 input[type=checkbox] {
@@ -232,16 +196,6 @@ input[type=checkbox] + label
 	margin-top: 15%;
 }
 
-.item{
-	&.w3{
-		width:25%;
-	}
-	&.w6{
-		width:50%;
-	}
-	&.w12{
-		width:100%;
-	}
-}
+
 
 

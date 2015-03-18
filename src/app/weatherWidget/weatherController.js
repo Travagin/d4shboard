@@ -2,7 +2,7 @@
 
 var weather = angular.module('weather', []);
 weather.controller('CityCtrl', ['$scope', function($scope){
-  $scope.cities = ['Madrid', 'Paris', 'Beijing'];
+  $scope.cities = [];
   $scope.addCity = function(){
     $scope.cities.push($scope.newCity);
     $scope.newCity = '';

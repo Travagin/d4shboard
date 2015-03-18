@@ -61,7 +61,7 @@
 
       <github-directive ng-show="widget.type == 'github'" ></github-directive>
       <text-directive ng-show="widget.type == 'text'"></text-directive>
-      <weather-directive ng-show="widget.type == 'weather'"></weather-directive>
+      <weather-directive ng-show="widget.type == 'weather'" class="weather-widget-{{widget.size}}"></weather-directive>
       <twitter-directive ng-show="widget.type == 'twitter'"></twitter-directive>
     </div>
   </div>

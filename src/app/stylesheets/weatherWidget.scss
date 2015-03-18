@@ -1,0 +1,93 @@
+.weather-widget{
+  padding-top: 0.5em;
+  text-align: left;
+  .weather-outer{
+    display: inline-block;
+    vertical-align:top;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 100%;
+    .city-weather{
+      border-top: 1px solid white;
+      .current{
+        display: inline-block;
+        width:100%;
+        height:5em;
+        .current-left{
+          float:left;
+          text-align: left;
+          padding: 1em 0 1em 1em;
+          width:50%;
+          height:5em;
+          .weather-title{
+            font-size: 1.5em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          .weather-subtitle{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+        .current-right{
+          float:right;
+          text-align: right;
+          padding: 1em 1em 1em 0;
+          width:50%;
+          height:5em;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          .weather-temp{
+            font-size: 2.5em;
+            display: inline-block;
+          }
+          .weather-icon{
+            height:3em;
+            display: inline-block;
+            line-height: 0px;
+            float:right;
+            padding-top: 0.25em;
+            img{
+              width:3em;
+            }
+          }
+        }
+      }
+      .forecast{
+        text-align: center;
+        height:6em;
+        padding-top: 1em;
+        border-top: 1px dashed white;
+        .weather-forecast{
+          display: inline-block;
+          width:25%;
+          .forecast-date{
+            font-size: 0.9em;
+          }
+          .forecast-icon{
+            height:2em;
+            img{
+              width: 2em;
+              height:2em;
+            }
+          }
+          .forecast-temp-range{
+            font-size: 0.75em;
+          }
+        }
+      }
+    }
+  }
+}
+.weather-widget-12{
+  .weather-outer{
+    width:50%;
+  }
+}

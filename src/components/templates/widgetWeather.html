@@ -1,22 +1,20 @@
 <div ng-hide="checked">
   <div class="widget" ng-show="widgetAdded">
-    <div class="text-center col-xs-12 {{widget.color}} widgetContent">
-      <div class="col-xs-12">
+    <div class="text-center col-xs-12 widgetContent">
+      <div class="col-xs-12 widgetInner {{widget.color}}" ng-controller="CityCtrl">
         <div class="pull-left">
           <input type='checkbox' ng-click="removeWidget($index)" name='close' value='valuable' id="close" />
           <label for="close"><span class="glyphicon glyphicon-trash"></span></label>
         </div>
+        <div class="pull-right">
+          <form ng-submit="addCity()" class="widget-search-form">
+            <span class="glyphicon glyphicon-search"></span>
+            <input type="text" ng-model="newCity" class="widget-search" placeholder="Add new city...">
+          </form>
+        </div>
         <div class="col-xs-12">
           <div class="row">
-            <div class="weather-widget col-sm-6" ng-controller="CityCtrl">
-              <div class="new-city">
-                <form ng-submit="addCity()" class="input-group">
-                  <input type="text" ng-model="newCity" class="form-control" placeholder="Add new city...">
-                  <span class="input-group-btn">
-                    <input class="btn btn-default" type="submit" value="Add">
-                  </span>
-                </form>
-              </div>
+            <div class="weather-widget" >
               <div class="weather-outer" ng-repeat="city in cities track by $index" ng-controller="WeatherCtrl" ng-init="init(cities[$index])" ng-show="weatherReady">
                 <div class="city-weather weather-{{weather.query.results.channel.item.condition.code | weatherType}}">
                   <div class="current" class="row" ng-click="showForecast = !showForecast">

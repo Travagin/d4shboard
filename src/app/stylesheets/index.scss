@@ -1,5 +1,6 @@
 @import 'color-fonts';
 @import 'githubWidget';
+@import 'weatherWidget';
 
 // General---------------------------------------------------------------------------------
 
@@ -194,6 +195,10 @@ input[type=checkbox] + label
 }
 .addButton{
 	margin-top: 15%;
+}
+
+.item{
+	padding:0px;
 }
 
 

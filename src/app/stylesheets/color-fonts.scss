@@ -27,8 +27,8 @@ $bgYellow : #f39c12;
 $gotham : 'Gotham', 'Helvetica', sans-serif;
 
 .widget-bg-general{
-	min-height:5rem;
 	height:auto;
+	min-height:5rem;
 }
 
 .red{
@@ -39,6 +39,7 @@ $gotham : 'Gotham', 'Helvetica', sans-serif;
 .blue{
 	@extend .widget-bg-general;
 	background-color: $bgBlue;
+	
 }
 
 .yellow{

@@ -34,8 +34,9 @@ angular.module('dashboard')
 		widgets.push(angular.copy(widget));
 	};
 
-	self.remove = function(index){
-		widgets.splice(index,1);
+	self.remove = function(widget){
+		widgets.splice(widgets.indexOf(widget),1);
+
 	};
 
 	return self;

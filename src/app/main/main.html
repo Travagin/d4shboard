@@ -58,14 +58,14 @@
 
   <div class="packery-container" >
     <div ng-repeat="widget in widgets" class="item col-xs-{{widget.size}}" packery-dir>
-
       <github-directive ng-show="widget.type == 'github'" ></github-directive>
-      <text-directive ng-show="widget.type == 'text'"></text-directive>
       <weather-directive ng-show="widget.type == 'weather'" class="weather-widget-{{widget.size}}"></weather-directive>
       <twitter-directive ng-show="widget.type == 'twitter'"></twitter-directive>
     </div>
   </div>
 
+
+  
 </div>
 
 

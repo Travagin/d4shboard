@@ -1,0 +1,9 @@
+@import 'color-fonts';
+
+ul li a{
+	color: #FFF;
+	margin-top: 0.5em;
+	width: 100%;
+	text-align: left;
+	background-color: transparentize($bgGray, 0.9);
+}

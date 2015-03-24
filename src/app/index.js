@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('dashboard', ['ui.router','github', 'weather', 'twitter'])
+angular.module('dashboard', ['ui.router','github', 'weather', 'twitter', 'freelancing'])
 .config(function ($stateProvider, $urlRouterProvider) {
 	$stateProvider
 	.state('home', {

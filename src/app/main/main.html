@@ -1,6 +1,6 @@
 
 <header>
-  <a class="btn btn-flat btn-lg" data-toggle="modal" href='#modal-id'>New Widget</a>
+  <a class="btn btn-flat btn-lg" data-toggle="modal" href='#modal-id' id="newWidget">New Widget</a>
 </header>
 <div class="container" id="main-container">
   <div class="modal fade" id="modal-id">
@@ -19,12 +19,13 @@
                   <option value = "github">Github</option>
                   <option value = "weather">Weather</option>
                   <option value = "twitter">Twitter</option>
+                  <option value = "freelancing" id="freelancingType">Freelancing</option>
                 </select>
               </div>
               <h4>Color</h4>
               <div class="SelectStyle">
                 <select name="color" ng-model="widget.color" required>
-                  <option value = "red">Red</option>
+                  <option value = "red" id = "redColor">Red</option>
                   <option value = "blue">Blue</option>
                   <option value = "yellow">Yellow</option>
                   <option value = "grey">Gray</option>
@@ -34,7 +35,7 @@
               <h4>Size</h4>
               <div class="SelectStyle">
                 <select name="size" ng-model="widget.size" required>
-                  <option value = "3">Small</option>
+                  <option value = "3" id = "threeSize">Small</option>
                   <option value = "6">Medium</option>
                   <option value = "12">Large</option>
                 </select>
@@ -49,7 +50,7 @@
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-flat addButton" ng-click="addWidget(widget)" data-dismiss="modal" ng-disabled="widgetForm.type.$error.required || widgetForm.color.$error.required || widgetForm.size.$error.required">Add Widget</button>
+          <button type="button" class="btn btn-flat addButton" ng-click="addWidget(widget)" data-dismiss="modal" ng-disabled="widgetForm.type.$error.required || widgetForm.color.$error.required || widgetForm.size.$error.required" id="addWidget">Add Widget</button>
 
         </div>
       </div>
@@ -57,10 +58,11 @@
   </div>
 
   <div class="packery-container" >
-    <div ng-repeat="widget in widgets" class="item col-xs-{{widget.size}}" packery-dir>
+    <div ng-repeat="widget in widgets track by $index" class="item col-xs-{{widget.size}}" packery-dir>
       <github-directive ng-show="widget.type == 'github'" ></github-directive>
       <weather-directive ng-show="widget.type == 'weather'" class="weather-widget-{{widget.size}}"></weather-directive>
       <twitter-directive ng-show="widget.type == 'twitter'"></twitter-directive>
+      <freelancing-directive class="freelancingWidget" ng-show="widget.type == 'freelancing'"></freelancing-directive>
     </div>
   </div>
 

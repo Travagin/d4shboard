@@ -1,9 +1,12 @@
 'use strict';
 
 module.exports = function(config) {
-
   config.set({
     autoWatch : false,
+
+    preprocessors: {
+      '**/*.html': ['ng-html2js']
+    },
 
     frameworks: ['jasmine'],
 
@@ -11,7 +14,12 @@ module.exports = function(config) {
 
     plugins : [
         'karma-phantomjs-launcher',
-        'karma-jasmine'
-    ]
+        'karma-jasmine',
+        'karma-ng-html2js-preprocessor'
+    ],
+
+    ngHtml2JsPreprocessor: {
+        moduleName: 'templates'
+    }
   });
 };

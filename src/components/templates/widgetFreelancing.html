@@ -1,0 +1,29 @@
+<div>
+    <div  ng-hide="checked">
+        <div class="widget" ng-show="widgetAdded">
+            <div class="text-center col-xs-12 widgetContent">
+                <div class="col-xs-12 widgetInner {{widget.color}}">
+                    <div class="pull-left">
+                        <input type='checkbox' ng-click="removeWidget($index)" name='close' value='valuable' id="close" />
+                        <label for="close"><span class="glyphicon glyphicon-trash"></span></label>
+                        <span>{{count}}</span>
+                    </div>
+                    <div class="pull-right">
+                        <form ng-submit="searchJob(keyword)" class="widget-search-form">
+                            <span class="glyphicon glyphicon-search"></span>
+                            <input type="text" ng-model="keyword" class="widget-search" placeholder="keyword..." id="keywordFilter">
+                        </form>
+                    </div>
+                    <div>
+                        <ul>
+                            <li ng-repeat="job in jobs track by $index">
+                                <a href="{{ job.link }}" target="_blank">{{job.title}}</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

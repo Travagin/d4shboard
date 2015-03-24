@@ -1,23 +1,27 @@
 'use strict';
 
-describe('controllers', function(){
-  var scope;
+describe('Freelancing Directive', function(){
+  var $compile,
+      $rootScope;
 
-  beforeEach(module('github'));
-  beforeEach(module('weather'));
+  // Load the myApp module, which contains the directive
+  beforeEach(module('freelancing'));
+  beforeEach(module('templates'));
 
-  beforeEach(inject(function($rootScope) {
-    scope = $rootScope.$new();
+  // Store references to $rootScope and $compile
+  // so they are available to all tests in this describe block
+  beforeEach(inject(function(_$compile_, _$rootScope_){
+    // The injector unwraps the underscores (_) from around the parameter names when matching
+    $compile = _$compile_;
+    $rootScope = _$rootScope_;
   }));
 
-  it('should define more than 5 awesome things', inject(function($controller) {
-    expect(scope.awesomeThings).toBeUndefined();
-
-    $controller('MainCtrl', {
-      $scope: scope
-    });
-
-    expect(angular.isArray(scope.awesomeThings)).toBeTruthy();
-    expect(scope.awesomeThings.length > 5).toBeTruthy();
-  }));
+  it('Replaces the element with the appropriate content', function() {
+    // Compile a piece of HTML containing the directive
+    var element = $compile("<freelancing-directive></freelancing-directive>")($rootScope);
+    // fire all the watches, so the scope expression {{1 + 1}} will be evaluated
+    $rootScope.$digest();
+    // Check that the compiled element contains the templated content
+    expect(element.html()).toContain("keywordFilter");
+  });
 });

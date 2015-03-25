@@ -6,7 +6,7 @@ Está desarrollada en Angular Js, y persiste los widgets y sus configuraciones e
 
 Actualmente cuenta con cuatro tipos de widgets, con posiblilidad de configurar tres tamaños y cinco colores.
 
-- **Github**      Muestra perfiles de Github, con datos de contacto, seguidores, seguidos y enlaces a los repositorios.
+- **Github**      Muestra perfiles de Github, seguidores, seguidos y enlaces a los repositorios.
 - **Twitter**     Devulve los diez últimos retweets de un hastag elegido por el usuario.
 - **Weather**    Predicción del tiempo de la ciudad o ciudades elegidas, y un forecast de varios días.
 - **Frelancing**  Ofertas para Freelance, por la keyword o tecnología elegida.

@@ -13,7 +13,7 @@ angular.module('dashboard').directive('packeryDir', ['$rootScope', function($roo
       else{
         $rootScope.packery.appended(element[0]);
       }
-      $rootScope.packery.layout();
+      setTimeout(function(){$rootScope.packery.layout();}, 400);
     }
   };
 }]);

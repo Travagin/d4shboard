@@ -13,9 +13,9 @@
         <div class="modal-body">
           <div class="col-xs-6">
             <form name="widgetForm" >
-              <h4>Type</h4>
+              <h4>Title</h4>
               <div class="SelectStyle">
-                <select name="type" ng-model="widget.type" required>
+                <select name="title" ng-model="widget.title" required>
                   <option value = "github">Github</option>
                   <option value = "weather">Weather</option>
                   <option value = "twitter">Twitter</option>
@@ -50,7 +50,7 @@
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-flat addButton" ng-click="addWidget(widget)" data-dismiss="modal" ng-disabled="widgetForm.type.$error.required || widgetForm.color.$error.required || widgetForm.size.$error.required" id="addWidget">Add Widget</button>
+          <button type="button" class="btn btn-flat addButton" ng-click="addWidget(widget)" data-dismiss="modal" ng-disabled="widgetForm.title.$error.required || widgetForm.color.$error.required || widgetForm.size.$error.required" id="addWidget">Add Widget</button>
 
         </div>
       </div>
@@ -59,10 +59,10 @@
 
   <div class="packery-container" >
     <div ng-repeat="widget in widgets track by $index" class="item col-xs-{{widget.size}}" packery-dir>
-      <github-directive ng-show="widget.type == 'github'" ></github-directive>
-      <weather-directive ng-show="widget.type == 'weather'" class="weather-widget-{{widget.size}}"></weather-directive>
-      <twitter-directive ng-show="widget.type == 'twitter'"></twitter-directive>
-      <freelancing-directive class="freelancingWidget" ng-show="widget.type == 'freelancing'"></freelancing-directive>
+      <github-directive ng-show="widget.title == 'github'" ></github-directive>
+      <weather-directive ng-show="widget.title == 'weather'" class="weather-widget-{{widget.size}}"></weather-directive>
+      <twitter-directive ng-show="widget.title == 'twitter'"></twitter-directive>
+      <freelancing-directive class="freelancingWidget" ng-show="widget.title == 'freelancing'"></freelancing-directive>
     </div>
   </div>
 

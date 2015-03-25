@@ -6,7 +6,12 @@ angular.module('dashboard', ['ui.router','github', 'weather', 'twitter', 'freela
 	.state('home', {
 		url: '/',
 		templateUrl: 'app/main/main.html',
-		controller: 'MainCtrl'
+		controller: 'MainCtrl',
+		resolve: {
+			widgets: function (Widgets) {
+				return Widgets.fetch();
+			}
+		}
 	});
 
 	$urlRouterProvider.otherwise('/');

@@ -1,6 +1,6 @@
-# Dashboard
+# d4shboard
 
-*Dashboard*, es una aplicación que consume servicios de internet mediante widgets independientes y configurables.
+*d4shboard*, es una aplicación que consume servicios de internet mediante widgets independientes y configurables.
 
 Está desarrollada en Angular Js, y persiste los widgets y sus configuraciones en una API Ruby on Rails.
 

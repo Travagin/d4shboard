@@ -13,3 +13,6 @@ Actualmente cuenta con cuatro tipos de widgets, con posiblilidad de configurar t
 
 
 *Actualmente en desarrollo, refactorización y resolución de errores*
+
+
+Diseño y descripción http://ow.ly/3xPBmu

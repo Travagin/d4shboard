@@ -16,4 +16,4 @@ Actualmente cuenta con cuatro tipos de widgets, con posiblilidad de configurar t
 
 
 Diseño y descripción http://ow.ly/3xPBmu
-Demo http://ow.ly/3xRojn
+**Demo** http://ow.ly/3xRojn
